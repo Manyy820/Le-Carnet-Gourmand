@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Recette de pâtes crémeuses au citron et avis des lecteurs.">
+    <title>Le Carnet Gourmand</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header class="site-header">
@@ -16,10 +18,12 @@
         </div>
     </header>
 
-    <main class="main-container">
+    <main class="main-container page-grid">
         <section class="main-card recipe-column" aria-labelledby="recipe-title">
             <h2 id="recipe-title">Pâtes crémeuses au citron</h2>
-            <p class="intro">Laissez votre avis sur cette recette grâce au formulaire ci-contre.</p>
+            <p class="intro">
+                Laissez votre avis sur cette recette grâce au formulaire ci-contre.
+            </p>
 
             <div class="recipe-zone">
                 <section aria-labelledby="ingredients-title">
@@ -47,18 +51,18 @@
             <section aria-labelledby="form-title">
                 <h2 id="form-title">Laisser un commentaire</h2>
 
-                <form id="comentForm" novalidate>
+                <form id="commentForm" novalidate>
                     <div class="form-group">
                         <label for="name">Votre nom</label>
                         <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        placeholder="Ex : Léa"
-                        minlength="2"
-                        maxlength="40"
-                        autocomplete="name"
-                        aria-describedby="nameHelp nameError"
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Ex : Léa"
+                            minlength="2"
+                            maxlength="40"
+                            autocomplete="name"
+                            aria-describedby="nameHelp nameError"
                         >
                         <p id="nameHelp" class="help-text">Minimum 2 caractères</p>
                         <p id="nameError" class="field-error" aria-live="polite"></p>
@@ -67,14 +71,15 @@
                     <div class="form-group">
                         <label for="comment">Votre commentaire</label>
                         <textarea
-                        name="comment" 
-                        id="comment"
-                        rows="5"
-                        placeholder="Votre avis sur la recette..."
-                        minlength="10"
-                        maxlength="500"
-                        aria-describedby="commentHelp commentError"
+                            id="comment"
+                            name="comment"
+                            rows="5"
+                            placeholder="Votre avis sur la recette..."
+                            minlength="10"
+                            maxlength="500"
+                            aria-describedby="commentHelp commentError"
                         ></textarea>
+
                         <div class="field-information">
                             <p id="commentHelp" class="help-text">Minimum 10 caractères</p>
                             <p class="help-text"><span id="characterCount">0</span>/500</p>
@@ -94,7 +99,7 @@
                 <h2 id="comments-title">Commentaires</h2>
 
                 <div id="commentsList" class="comments-list">
-                    <article class="comments-card">
+                    <article class="comment-card">
                         <h3>Téo</h3>
                         <p>Superbe recette !</p>
                         <button class="delete-button" type="button">
@@ -103,7 +108,7 @@
                         </button>
                     </article>
 
-                    <article class="comments-card">
+                    <article class="comment-card">
                         <h3>Léa</h3>
                         <p>Test de commentaire</p>
                         <button class="delete-button" type="button">
@@ -113,14 +118,16 @@
                     </article>
                 </div>
 
-                <p id="emptyMessage" class="empty-message" hidden>Aucun commentaire pour le moment.</p>
+                <p id="emptyMessage" class="empty-message" hidden>
+                    Aucun commentaire pour le moment.
+                </p>
             </section>
         </aside>
     </main>
 
     <footer class="site-footer">
         <div class="main-container">
-            <p>Devoir JavaScript - Frontend</p>
+            <p>Devoir JavaScript — Frontend</p>
         </div>
     </footer>
 
