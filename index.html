@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="main-container header-content">
+            <div class="brand-icon" aria-hidden="true">🍳</div>
+            <div>
+                <h1>Le Carnet Gourmand</h1>
+                <p>Avis des lecteurs</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="main-card recipe-column" aria-labelledby="recipe-title">
+            <h2 id="recipe-title">Pâtes crémeuses au citron</h2>
+            <p class="intro">Laissez votre avis sur cette recette grâce au formulaire ci-contre.</p>
+
+            <div class="recipe-zone">
+                <section aria-labelledby="ingredients-title">
+                    <h3 id="ingredients-title">Ingrédients</h3>
+                    <ul>
+                        <li>Pâtes</li>
+                        <li>Crème</li>
+                        <li>Citron</li>
+                        <li>Parmesan</li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="preparation-title">
+                    <h3 id="preparation-title">Préparation</h3>
+                    <ol>
+                        <li>Cuire les pâtes.</li>
+                        <li>Mélanger la crème et le citron.</li>
+                        <li>Ajouter le parmesan.</li>
+                    </ol>
+                </section>
+            </div>
+        </section>
+
+        <aside class="main-card comments-column">
+            <section aria-labelledby="form-title">
+                <h2 id="form-title">Laisser un commentaire</h2>
+
+                <form id="comentForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Votre nom</label>
+                        <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Ex : Léa"
+                        minlength="2"
+                        maxlength="40"
+                        autocomplete="name"
+                        aria-describedby="nameHelp nameError"
+                        >
+                        <p id="nameHelp" class="help-text">Minimum 2 caractères</p>
+                        <p id="nameError" class="field-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Votre commentaire</label>
+                        <textarea
+                        name="comment" 
+                        id="comment"
+                        rows="5"
+                        placeholder="Votre avis sur la recette..."
+                        minlength="10"
+                        maxlength="500"
+                        aria-describedby="commentHelp commentError"
+                        ></textarea>
+                        <div class="field-information">
+                            <p id="commentHelp" class="help-text">Minimum 10 caractères</p>
+                            <p class="help-text"><span id="characterCount">0</span>/500</p>
+                        </div>
+
+                        <p id="commentError" class="field-error" aria-live="polite"></p>
+                    </div>
+
+                    <button class="publish-button" type="submit">Publier</button>
+
+                    <p id="generalError" class="error-message" aria-live="polite" hidden></p>
+                    <p id="successMessage" class="success-message" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <section class="comments-section" aria-labelledby="comments-title">
+                <h2 id="comments-title">Commentaires</h2>
+
+                <div id="commentsList" class="comments-list">
+                    <article class="comments-card">
+                        <h3>Téo</h3>
+                        <p>Superbe recette !</p>
+                        <button class="delete-button" type="button">
+                            <span aria-hidden="true">🗑️</span>
+                            Supprimer
+                        </button>
+                    </article>
+
+                    <article class="comments-card">
+                        <h3>Léa</h3>
+                        <p>Test de commentaire</p>
+                        <button class="delete-button" type="button">
+                            <span aria-hidden="true">🗑️</span>
+                            Supprimer
+                        </button>
+                    </article>
+                </div>
+
+                <p id="emptyMessage" class="empty-message" hidden>Aucun commentaire pour le moment.</p>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="main-container">
+            <p>Devoir JavaScript - Frontend</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
